@@ -14,56 +14,56 @@ window.configure(background ="pink")
 
 title = tk.Label(text="CLICK BELOW TO CHOOSE PICTURE FOR TESTING DISEASE....", background = "pink", fg="Black", font=("", 15))
 title.grid()
-#def bact():
-#    window.destroy()
-#    window1 = tk.Tk()
-#
-#    window1.title("LEAF DISEASE DETECTION")
-#
-#    window1.geometry("500x510")
-#    window1.configure(background="pink")
-#
-#    def exit():
-#        window1.destroy()
-#    rem = "The remedies for Bacterial Spot are:\n\n "
-#    remedies = tk.Label(text=rem, background="lightgreen",
-#                      fg="Brown", font=("", 15))
-#    remedies.grid(column=0, row=7, padx=10, pady=10)
-#    rem1 = " Discard or destroy any affected plants. \n  Do not compost them. \n  Rotate yoour tomato plants yearly to prevent re-infection next year. \n Use copper fungicites"
-#    remedies1 = tk.Label(text=rem1, background="lightgreen",
-#                        fg="Black", font=("", 12))
-#    remedies1.grid(column=0, row=8, padx=10, pady=10)
-#
-#    button = tk.Button(text="Exit", command=exit)
-#    button.grid(column=0, row=9, padx=20, pady=20)
-#
-#    window1.mainloop()
-#
-#
-#def vir():
-#    window.destroy()
-#    window1 = tk.Tk()
-#
-#    window1.title("LEAF DISEASE DETECTION")
-#
-#    window1.geometry("650x510")
-#    window1.configure(background="pink")
-#
-#    def exit():
-#        window1.destroy()
-#    rem = "The remedies for Yellow leaf curl virus are: "
-#    remedies = tk.Label(text=rem, background="lightgreen",
-#                      fg="Brown", font=("", 15))
-#    remedies.grid(column=0, row=7, padx=10, pady=10)
-#    rem1 = " Monitor the field, handpick diseased plants and bury them. \n  Use sticky yellow plastic traps. \n  Spray insecticides such as organophosphates, carbametes during the seedliing stage. \n Use copper fungicites"
-#    remedies1 = tk.Label(text=rem1, background="lightgreen",
-#                         fg="Black", font=("", 12))
-#    remedies1.grid(column=0, row=8, padx=10, pady=10)
-#
-#    button = tk.Button(text="Exit", command=exit)
-#    button.grid(column=0, row=9, padx=20, pady=20)
-#
-#    window1.mainloop()
+def bact():
+   window.destroy()
+   window1 = tk.Tk()
+
+   window1.title("LEAF DISEASE DETECTION")
+
+   window1.geometry("500x510")
+   window1.configure(background="pink")
+
+   def exit():
+       window1.destroy()
+   rem = "The remedies for Bacterial Spot are:\n\n "
+   remedies = tk.Label(text=rem, background="lightgreen",
+                     fg="Brown", font=("", 15))
+   remedies.grid(column=0, row=7, padx=10, pady=10)
+   rem1 = " Discard or destroy any affected plants. \n  Do not compost them. \n  Rotate yoour tomato plants yearly to prevent re-infection next year. \n Use copper fungicites"
+   remedies1 = tk.Label(text=rem1, background="lightgreen",
+                       fg="Black", font=("", 12))
+   remedies1.grid(column=0, row=8, padx=10, pady=10)
+
+   button = tk.Button(text="Exit", command=exit)
+   button.grid(column=0, row=9, padx=20, pady=20)
+
+   window1.mainloop()
+
+
+def vir():
+   window.destroy()
+   window1 = tk.Tk()
+
+   window1.title("LEAF DISEASE DETECTION")
+
+   window1.geometry("650x510")
+   window1.configure(background="pink")
+
+   def exit():
+       window1.destroy()
+   rem = "The remedies for Yellow leaf curl virus are: "
+   remedies = tk.Label(text=rem, background="lightgreen",
+                     fg="Brown", font=("", 15))
+   remedies.grid(column=0, row=7, padx=10, pady=10)
+   rem1 = " Monitor the field, handpick diseased plants and bury them. \n  Use sticky yellow plastic traps. \n  Spray insecticides such as organophosphates, carbametes during the seedliing stage. \n Use copper fungicites"
+   remedies1 = tk.Label(text=rem1, background="lightgreen",
+                        fg="Black", font=("", 12))
+   remedies1.grid(column=0, row=8, padx=10, pady=10)
+
+   button = tk.Button(text="Exit", command=exit)
+   button.grid(column=0, row=9, padx=20, pady=20)
+
+   window1.mainloop()
 
 def latebl():
     window.destroy()
@@ -104,7 +104,7 @@ def analysis():
     IMG_SIZE = 50
     LR = 1e-3
     MODEL_NAME = 'healthyvsunhealthy-{}-{}.model'.format(LR, '2conv-basic')
- #verify_data = np.load('verify_data.npy')
+    #verify_data = np.load('verify_data.npy')
     def process_verify_data():
         verifying_data = []
         for img in tqdm(os.listdir(verify_dir)):
@@ -194,38 +194,38 @@ def analysis():
             disease = tk.Label(text='DISEASE NAME ' + diseasename, background="lightgreen",
                                fg="Black", font=("", 15))
             disease.grid(column=0, row=4, padx=10, pady=10)
-#            r = tk.Label(text='Click below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
-#            r.grid(column=0, row=5, padx=10, pady=10)
-#            button3 = tk.Button(text="Remedies", command=bact)
-#            button3.grid(column=0, row=6, padx=10, pady=10)
+            r = tk.Label(text='Click  below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
+            r.grid(column=0, row=5, padx=10, pady=10)
+            button3 = tk.Button(text="Remedies", command=bact)
+            button3.grid(column=0, row=6, padx=10, pady=10)
         elif str_label == 'viral':
             diseasename = "Yellow leaf curl virus "
             disease = tk.Label(text='DISEASE NAME: ' + diseasename, background="lightgreen",
                                fg="Black", font=("", 15))
             disease.grid(column=0, row=4, padx=10, pady=10)
-#            r = tk.Label(text='Click below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
-#            r.grid(column=0, row=5, padx=10, pady=10)
-#            button3 = tk.Button(text="Remedies", command=vir)
-#            button3.grid(column=0, row=6, padx=10, pady=10)
+            r = tk.Label(text='Click below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
+            r.grid(column=0, row=5, padx=10, pady=10)
+            button3 = tk.Button(text="Remedies", command=vir)
+            button3.grid(column=0, row=6, padx=10, pady=10)
         elif str_label == 'lateblight':
             diseasename = "Late Blight "
             disease = tk.Label(text='DISEASE NAME: ' + diseasename, background="lightgreen",
                                fg="Black", font=("", 15))
             disease.grid(column=0, row=4, padx=10, pady=10)
-#            r = tk.Label(text='Click below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
-#            r.grid(column=0, row=5, padx=10, pady=10)
-#            button3 = tk.Button(text="Remedies", command=latebl)
-#            button3.grid(column=0, row=6, padx=10, pady=10)
+            r = tk.Label(text='Click below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
+            r.grid(column=0, row=5, padx=10, pady=10)
+            button3 = tk.Button(text="Remedies", command=latebl)
+            button3.grid(column=0, row=6, padx=10, pady=10)
             
         elif str_label == 'septoria':
             diseasename = "Tomato Septoria "
             disease = tk.Label(text='DISEASE NAME: ' + diseasename, background="lightgreen",
                                fg="Black", font=("", 15))
             disease.grid(column=0, row=4, padx=10, pady=10)
-#            r = tk.Label(text='Click below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
-#            r.grid(column=0, row=5, padx=10, pady=10)
-#            button3 = tk.Button(text="Remedies", command=latebl)
-#            button3.grid(column=0, row=6, padx=10, pady=10)
+            r = tk.Label(text='Click below for remedies...', background="lightgreen", fg="Brown", font=("", 15))
+            r.grid(column=0, row=5, padx=10, pady=10)
+            button3 = tk.Button(text="Remedies", command=latebl)
+            button3.grid(column=0, row=6, padx=10, pady=10)
             
         else:
             r = tk.Label(text='Plant is healthy', background="lightgreen", fg="Black",
@@ -240,9 +240,9 @@ def openphoto():
     for fileName in fileList:
         os.remove(dirPath + "/" + fileName)
  # location of the image which you want to test..... you can change it according to the image location you have  
-    fileName = askopenfilename(initialdir=r'C:\Users\shara\OneDrive\Desktop\PROJ9383\test\test', title='Select image for analysis ',
+    fileName = askopenfilename(initialdir=r'C:\Users\shara\OneDrive\Desktop\Identification of Plant Disease from Leaf Images Based on Convolutional Neural Network\test\test', title='Select image for analysis ',
                            filetypes=[('image files', '.jpg')])
-    dst = r"C:\Users\shara\OneDrive\Desktop\PROJ9383\testpicture"
+    dst = r"C:\Users\shara\OneDrive\Desktop\Identification of Plant Disease from Leaf Images Based on Convolutional Neural Network\testpicture"
     shutil.copy(fileName, dst)
     load = Image.open(fileName)
     render = ImageTk.PhotoImage(load)
